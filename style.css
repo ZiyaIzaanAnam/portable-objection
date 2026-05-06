@@ -6,8 +6,12 @@ body,
     margin: 0;
     overflow: hidden;
     user-select: none;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e2e8f0;
 }
 
+/* ---------- RANGE ---------- */
 datalist {
     display: flex;
     flex-direction: column;
@@ -26,20 +30,45 @@ input[type="range"] {
     margin: 0;
 }
 
+/* ---------- INPUTS ---------- */
 select {
-    height: 30px;
+    height: 34px;
+    border-radius: 8px;
+    border: none;
+    padding: 4px 8px;
+    background: #1e293b;
+    color: #e2e8f0;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
 }
 
-a{
-    color:#00B0FF;
+/* ---------- LINKS ---------- */
+a {
+    color: #38bdf8;
     text-decoration: none;
 }
-button{
-    border: 2px solid #00B0FF;
-    border-radius: 4px;
-    background-color: #fff;
+
+/* ---------- BUTTONS ---------- */
+button {
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+button:hover {
+    transform: translateY(-1px);
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* ---------- MAIN CONTENT ---------- */
 .content {
     position: absolute;
     left: 50%;
@@ -49,40 +78,55 @@ button{
     margin-top: -7%;
 }
 
+/* ---------- TITLE ---------- */
 #title-div {
     position: fixed;
     top: 0px;
     width: 100%;
     z-index: 100;
+    backdrop-filter: blur(10px);
+    background: rgba(15, 23, 42, 0.6);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
+#title1 {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ---------- IMAGE AREA ---------- */
 #obje-div {
     height: 400px;
     width: 100%;
-    /* z-index: -1; */
 }
 
-#obje-div>img {
+#obje-div > img {
     position: relative;
     width: 100%;
     max-width: 700px;
     top: -10px;
     left: 0;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
 }
 
+/* ---------- PANEL ---------- */
 #panel1 {
     position: fixed;
     bottom: 10px;
     width: 100%;
     z-index: 101;
+    backdrop-filter: blur(12px);
+    background: rgba(15, 23, 42, 0.7);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 10px 0;
 }
 
+/* ---------- STATES ---------- */
 .hide {
     display: none !important;
 }
 
 .hide2 {
-    /* display: none !important; */
     opacity: 0;
     transition: all .5s;
 }
@@ -91,106 +135,43 @@ button{
     cursor: none;
 }
 
+/* ---------- SHAKE ---------- */
 .shake {
     animation: shake 300ms ease-in-out;
 }
 
 @keyframes shake {
-
-    10%,
-    90% {
-        transform: translate3d(-2px, 2px, 0);
-    }
-
-    20%,
-    80% {
-        transform: translate3d(4px, -4px, 0);
-    }
-
-    30%,
-    70% {
-        transform: translate3d(-8px, 8px, 0);
-    }
-
-    40%,
-    60% {
-        transform: translate3d(6px, -6px, 0);
-    }
-
-    50% {
-        transform: translate3d(-8px, 8px, 0);
-    }
-
-    45%,
-    55% {
-        transform: translate3d(4px, 4px, 0);
-    }
-
-    35%,
-    65% {
-        transform: translate3d(-6px, -6px, 0);
-    }
-
-    25%,
-    75% {
-        transform: translate3d(10px, 10px, 0);
-    }
-
-    15%,
-    85% {
-        transform: translate3d(-8px, -8px, 0);
-    }
+    10%, 90% { transform: translate3d(-2px, 2px, 0); }
+    20%, 80% { transform: translate3d(4px, -4px, 0); }
+    30%, 70% { transform: translate3d(-8px, 8px, 0); }
+    40%, 60% { transform: translate3d(6px, -6px, 0); }
+    50% { transform: translate3d(-8px, 8px, 0); }
+    45%, 55% { transform: translate3d(4px, 4px, 0); }
+    35%, 65% { transform: translate3d(-6px, -6px, 0); }
+    25%, 75% { transform: translate3d(10px, 10px, 0); }
+    15%, 85% { transform: translate3d(-8px, -8px, 0); }
 }
 
-/* 旧动画 */
-/* @keyframes shake {
-
-    10%,
-    90% {
-        transform: translate3d(-1px, +1px, 0);
-    }
-
-    20%,
-    80% {
-        transform: translate3d(+3px, -3px, 0);
-    }
-
-    30%,
-    70% {
-        transform: translate3d(-6px, +6px, 0);
-    }
-
-    40%,
-    60% {
-        transform: translate3d(+4px, -4px, 0);
-    }
-
-    50% {
-        transform: translate3d(-6px, +6px, 0);
-    }
-} */
-
+/* ---------- SPECIFIC SIZES ---------- */
 #btn2 {
-    height: 23px;
+    height: 26px;
 }
 
 #character {
-    width: 145px;
+    width: 150px;
 }
 
 #voicetype {
-    width: 130px;
+    width: 140px;
 }
 
+/* ---------- MUSIC PLAYER ---------- */
 meting-js {
-    position: relative;
-    z-index: 200;
-    opacity: 0.8;
-    width: 100%;
-    display: block;
-    height: 70px;
     position: fixed;
     bottom: 0;
+    width: 100%;
+    z-index: 200;
+    opacity: 0.85;
 }
 
 .aplayer-lrc {
@@ -201,43 +182,7 @@ meting-js {
     opacity: 0.3;
 }
 
-
-
-/*[type="range"] {*/
-/*  -webkit-appearance: none;*/
-/*  appearance: none;*/
-/*  margin: 0;*/
-/*  outline: 0;*/
-/*  background-color: transparent;*/
-/*  width: 500px;*/
-/*}*/
-
-/* 定义range控件轨道的样式 */
-/*[type="range"]::-webkit-slider-runnable-track {*/
-/*  height: 4px;*/
-/*  background: #eee;*/
-/*}*/
-
-/* 定义range控件容器的样式 */
-/*[type="range" i]::-webkit-slider-container {*/
-/*  height: 20px;*/
-/*  overflow: hidden;*/
-/*}*/
-
-/* 定义range控件拇指的样式 */
-/*[type="range"]::-webkit-slider-thumb {*/
-/*  -webkit-appearance: none;*/
-/*  appearance: none;*/
-/*  width: 20px;*/
-/*  height: 20px;*/
-/*  border-radius: 50%;*/
-/*  background-color: #00B0FF;*/
-/*  border: 1px solid transparent;*/
-/*  margin-top: -6px;*/
-  /* 使用border-image属性给拇指添加渐变边框 */
-/*  border-image: linear-gradient(#00B0FF, #00B0FF) 0 fill / 8 20 8 0 / 0px 0px 0 2000px;*/
-/*}*/
-
+/* ---------- RANGE STYLE ---------- */
 [type="range"] {
     -webkit-appearance: none;
     appearance: none;
@@ -246,27 +191,30 @@ meting-js {
     background-color: transparent;
     width: 500px;
 }
+
 [type="range"]::-webkit-slider-runnable-track {
     height: 4px;
-    background: #eee;
+    background: #334155;
+    border-radius: 2px;
 }
+
 [type="range" i]::-webkit-slider-container {
     height: 18px;
     overflow: hidden;
 }
+
 [type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background-color: #00B0FF;
-    border: 1px solid transparent;
+    background: #38bdf8;
     margin-top: -7px;
-    border-image: linear-gradient(#00B0FF,#00B0FF) 0 fill / 8 20 8 0 / 0px 0px 0 2000px;
+    box-shadow: 0 0 10px rgba(56,189,248,0.8);
 }
 
-#tickmarks{
+/* ---------- TICKS ---------- */
+#tickmarks {
     margin-top: -8px;
-}
 }
