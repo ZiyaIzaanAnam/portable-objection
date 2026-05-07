@@ -1,11 +1,21 @@
 {
-  "name": "随身异议",
-  "short_name": "随身异议",
+  "name": "Portable Objection!!!",
+  "short_name": "Objection",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#fff",
-  "description": "随时随地——異議あり！",
+  "background_color": "#ffffff",
+  "theme_color": "#00B0FF",
   "icons": [
+    {
+      "src": "img/badge.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/badge.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
     {
       "src": "img/badge.png",
       "sizes": "220x220",
