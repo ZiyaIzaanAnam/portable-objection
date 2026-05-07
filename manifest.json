@@ -1,15 +1,25 @@
 {
-  "name": "Portable Objection!!!",
+  "name": "Portable Objection",
   "short_name": "Objection",
   "start_url": ".",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "#ffffff",
-  "theme_color": "#00B0FF",
+  "theme_color": "#08638d",
   "icons": [
     {
       "src": "img/badge.png",
       "sizes": "220x220",
       "type": "image/png"
     }
+  ],
+  "orientation": "portrait",
+  "display_override": [
+    "window-controls-overlay",
+    "fullscreen",
+    "standalone",
+    "minimal-ui"
+  ],
+  "categories": [
+    "utilities"
   ]
 }
